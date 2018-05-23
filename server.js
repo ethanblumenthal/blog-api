@@ -1,7 +1,7 @@
 // REQUIRED MODULES
 const express = require('express');
 const morgan = require('morgan');
-const router = require('./router');
+const BlogPostsRouter = require('./BlogPostsRouter');
 const app = express();
 
 // MIDDLEWARE
