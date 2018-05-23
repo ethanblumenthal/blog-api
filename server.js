@@ -1,12 +1,12 @@
 // REQUIRED MODULES
 const express = require('express');
 const morgam = require('morgan');
-const {BlogPosts} = require('./models');
+const router = require('./router');
 const app = express();
 
 // MIDDLEWARE
 app.use(morgan('common'));
-app.use('/blog', BlogPosts);
+app.use('/blog-posts', router);
 
 // LISTENING PORTS
 app.listen(process.env.PORT || 8080, () => {
