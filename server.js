@@ -1,6 +1,6 @@
 // REQUIRED MODULES
 const express = require('express');
-const morgam = require('morgan');
+const morgan = require('morgan');
 const router = require('./router');
 const app = express();
 
