@@ -6,7 +6,7 @@ const app = express();
 
 // MIDDLEWARE
 app.use(morgan('common'));
-app.use('/blog-posts', router);
+app.use('/blog-posts', BlogPostsRouter);
 
 // RUN SERVER
 function runServer() {
