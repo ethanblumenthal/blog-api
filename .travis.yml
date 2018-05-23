@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: MNUSjbAMtSpFiK5Zfi7dmC13ccfMSWKuV/k9LnLcki2dBIii547ailPNdH3cSCADknLT955n+LZkoAArI0sU6XPNI+wvlanz6fKlMcEae/00K5PZY4o/2LeXZ0dm5/P/5JBk7C0m0ACsiIg1i2ttFKGRqdzv3eBV5OWS58kevPWI57v/MYI413liuUoYhC1+sNa2jSYCEspb9XRVFaL+X8aEmI0Qb4+8joOVUd7l9rkaFkjvt/uuTlfDeA6tZqSlKETDrSoukDDYPbMJzbhJjzu+6NJFhhm/Z6DxC40DOeb+b6c0ReX8eaVLagipi+FfhVkKkLmX1Q4/l5sroXENiaJtEWxlZ1su/RrJJqYHf1EbayXeeIMpG9lRGhL6BvPr7Ncs7MybSsGv8ArXpiDnNJbjwrqifjR8vg+hP9xd8DE/G88OV+GHtrcQCDsMLQ0K/HFwTiSY8ZKg8qyaFvbp6Gh20rKagdSqXTyg541XT1M7efrW5xkya3F0jDzXPMLYBNH9oUx7NlwMYzTImqILFh9K2pdBZkMkm3hw+KVVqvMFPWLEt6IQmZqRp4amRljN7TTTP6pcCTlHJ0fEVDhsLBaHkMrRjQlrvX/jClyb2sonvMHmrJE50QzlIj52e3yho2sKPkH+Y2IgHDghmJRDCnYAcVHC6z6D5CzvmgrNhHY=
+  app: fathomless-waters-12086
+  on:
+    repo: ethanblumenthal/blog-api
