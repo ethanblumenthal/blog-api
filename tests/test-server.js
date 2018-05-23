@@ -31,6 +31,7 @@ describe('Blog Posts', function() {
       });
   });
 
+  // POST ITEGRATION TEST
   it('should add a blog post on POST', function() {
     const newPost = {
       title: 'Lorem ip some',
@@ -50,6 +51,35 @@ describe('Blog Posts', function() {
         expect(res.body.title).to.equal(newPost.title);
         expect(res.body.content).to.equal(newPost.content);
         expect(res.body.author).to.equal(newPost.author)
+      });
+  });
+
+  // POST ERROR MESSAGE
+  it('should error if POST missing expected values', function() {
+    const badRequestData = {};
+    return chai.request(app)
+      .post('/blog-posts')
+      .send(badRequestData)
+      .catch(function(res) {
+        expect(res).to.have.status(400);
+      });
+  });
+
+  // PUT INTEGRATION TEST
+  it('should update blog posts on PUT', function() {
+    return chai.request(app)
+      .get('/blog-posts')
+      .then(function( res) {
+        const updatedPost = Object.assign(res.body[0], {
+          title: 'connect the dots',
+          content: 'la la la la la'
+        });
+        return chai.request(app)
+          .put(`/blog-posts/${res.body[0].id}`)
+          .send(updatedPost)
+          .then(function(res) {
+            expect(res).to.have.status(204);
+          });
       });
   });
 });
